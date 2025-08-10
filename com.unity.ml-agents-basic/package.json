@@ -1,0 +1,10 @@
+{
+  "name": "com.unity.ml-agents-basic",
+  "displayName": "ML Agents Basic",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "A basic ML Agents implementation for learning purposes.",
+  "dependencies": {
+    "com.unity.modules.physics": "1.0.0"
+  }
+}
