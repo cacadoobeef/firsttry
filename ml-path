@@ -3,7 +3,7 @@
 ## Dein Profil (Ausgangspunkt)
 - Embedded Software Entwicklung
 - Integrations- / Systemtests, Testautomatisierung, Visualisierung von Testergebnissen
-- Sprachen (Selbsteinschätzung): C 7/10, C++ 5/10 (inkl. OOP 5/10), Python 4/10
+- Sprachen (Selbsteinschätzung): C 7/10, C++ 5/10 (inkl. OOP 5/10), Python 6/10
 - Stärken: Systemnähe, Test- & Qualitätsfokus, Performance-Denken
 - Primäre Lücke: Produktive ML-/MLOps-/Datenkompetenzen + Python-Vertiefung + Statistik
 
@@ -13,7 +13,7 @@
 
 | Kompetenzbereich | Aktuell (geschätzt) | Ziel für erste Rolle (6–9M) | Fokus-Themen |
 |------------------|---------------------|-----------------------------|--------------|
-| Python            | 4/10                | 7–8/10                      | Idiomatik, Packaging (pyproject), pytest, Logging, Typisierung |
+| Python            | 6/10                | 7–8/10                      | Idiomatik, Packaging (pyproject), pytest, Logging, Typisierung |
 | Statistik / Math  | Niedrig             | Mittel                      | Verteilungen, Hypothesentests, Lineare Regression, Regularisierung |
 | Klassisches ML    | Niedrig             | Mittel-Hoch                 | Feature Engineering, Modellvergleich, Evaluierungsmetriken |
 | Deep Learning     | Gering              | Mittel                      | CNN Basics, einfache NLP, Transfer Learning |
