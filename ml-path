@@ -1,0 +1,351 @@
+# AZAV-fähige KI-Weiterbildung – Individuelle Roadmap für dein Profil
+
+## Dein Profil (Ausgangspunkt)
+- Embedded Software Entwicklung
+- Integrations- / Systemtests, Testautomatisierung, Visualisierung von Testergebnissen
+- Sprachen (Selbsteinschätzung): C 7/10, C++ 5/10 (inkl. OOP 5/10), Python 4/10
+- Stärken: Systemnähe, Test- & Qualitätsfokus, Performance-Denken
+- Primäre Lücke: Produktive ML-/MLOps-/Datenkompetenzen + Python-Vertiefung + Statistik
+
+---
+
+## A. Skill-Gap Analyse (Ist → Soll)
+
+| Kompetenzbereich | Aktuell (geschätzt) | Ziel für erste Rolle (6–9M) | Fokus-Themen |
+|------------------|---------------------|-----------------------------|--------------|
+| Python            | 4/10                | 7–8/10                      | Idiomatik, Packaging (pyproject), pytest, Logging, Typisierung |
+| Statistik / Math  | Niedrig             | Mittel                      | Verteilungen, Hypothesentests, Lineare Regression, Regularisierung |
+| Klassisches ML    | Niedrig             | Mittel-Hoch                 | Feature Engineering, Modellvergleich, Evaluierungsmetriken |
+| Deep Learning     | Gering              | Mittel                      | CNN Basics, einfache NLP, Transfer Learning |
+| MLOps             | Sehr gering         | Mittel                      | CI/CD, MLflow/DVC, Docker, Deployment, Monitoring |
+| Edge / Embedded ML| Potenzial (C/C++)   | Mittel                      | Modellkonvertierung (ONNX), Quantisierung, Laufzeit-Benchmark |
+| Cloud Grundlagen  | Gering              | Mittel                      | IAM, Storage, Compute, Container Registry, einfache Pipelines |
+| Testen in ML      | Übertragbar         | Hoch (USP)                  | Data & Model Tests, Drift Checks, Reproducibility |
+| Business / ROI    | Niedrig             | Basis                       | Use-Case Scoping, Nutzenargumentation |
+| Dokumentation     | Mittel              | Hoch                        | README-Standards, Architekturdiagramme, Releasenotes |
+
+---
+
+## B. Mögliche Lernpfade (AZAV-fähig)
+
+1. Data Science + MLOps Kombiprogramm  
+   - Breite Basis + Grundlagen Deployment  
+   - Edge-Anteil meist gering → Eigeninitiative nötig  
+
+2. Data Engineering + MLOps (mit ML-Fundament)  
+   - Pipeline- & Produktionsfokus, nutzt Test-/Systemkompetenz  
+   - Weniger Modellierungsbreite  
+
+3. Standard Data Science Maßnahme + eigene Edge-AI Spezialisierung  
+   - Gute Marktrelevanz + Differenzierung  
+   - Erfordert Selbstlernblöcke
+
+**Empfehlung:** Pfad 1 kombiniert mit gezielter Edge-AI Spezialisierung (eigenes Projektcluster).
+
+---
+
+## C. Empfohlene Zielrollen (priorisiert)
+
+| Rolle | Passung | Differenzierungspotenzial | Kommentar |
+|-------|---------|---------------------------|-----------|
+| MLOps / AI Platform Engineer | Hoch | Mittel | Nutzt Test & Systemdenken |
+| Edge AI / Embedded ML Engineer | Hoch | Hoch | Starker Fit durch C/C++ |
+| Test & Quality Engineer für KI | Hoch | Sehr hoch | Nische, schnell Positionierbar |
+| (später) AI Solution / Tech Lead | Mittel | Langfristig | Aufbau nach 1–2 Projekten |
+
+---
+
+## D. 6–9 Monats Roadmap
+
+### Phase 0 (Woche 0–2) – Vorbereitung & Förderantrag
+Ziele:
+- Bildungsgutschein-Vorbereitung (Maßnahmenummern sammeln)
+- Lernroutine & Python-Fundament
+
+Aufgaben:
+- Python Basics auffrischen: Funktionen, Module, OOP, Fehlerbehandlung, Logging
+- Statistik Grundlagen (Mittelwert, Varianz, Normalverteilung, Hypothesentest)
+- 2–3 AZAV-Kurse shortlist (Inhalte, MLOps-Anteil, Maßnahmenummer bestätigen lassen)
+- GitHub Repo "ml-prep" anlegen (Struktur: `notebooks/`, `src/`, `tests/`, `README.md` mit Lernlog)
+
+### Phase 1 (Woche 3–10) – Pre-Course Upskilling
+Ziele:
+- Python 6–7/10
+- Erstes End-to-End Mini-Projekt
+- Grundlegendes ML-Verständnis
+
+Inhalte:
+- pandas, NumPy, seaborn/plotly
+- pytest + Fixtures, TDD leichte Komponenten
+- CLI Tools (argparse / typer), Konfiguration (YAML)
+- Metriken: Accuracy, Precision, Recall, ROC-AUC
+
+Mini-Projekt 1 (Sensor-Klassifikation):
+- Datensatz: UCI HAR oder Maschinenvibrationsdaten
+- Pipeline: Preprocessing → Feature Extraction → Modell (RandomForest / XGBoost) → Evaluation
+- Tests: Data Schema (pydantic/great_expectations), Modell-Leistungsschwelle
+- Ergebnis: Sauberes Repo mit README (Problem, Daten, Architekturdiagramm)
+
+### Phase 2 (Monat 3–5) – Hauptkurs (Data Science Modul)
+Ziele:
+- Klassisches ML Fundament + erste Deep Learning Berührung
+- Systematisches Experimentieren
+
+Aktionen:
+- Jedes Kursmodul → Commit + Kurzes Changelog
+- Einführung MLflow oder DVC direkt integrieren
+- Start eines "Experiment Tracking" Notebooks (Vergleich Modellfamilien)
+
+### Phase 3 (Monat 5–6) – MLOps Modul
+Ziele:
+- Reproduzierbare Pipelines
+- CI/CD Aufbau
+
+Projekt (End-to-End):
+- Training Script (parametrisierbar)
+- MLflow Tracking + Model Registry (oder DVC + metrics.json)
+- Docker: Train-Image & Infer-Image
+- API: FastAPI Inferenz-Service
+- CI (GitHub Actions): Lint → Tests → Train (cache Artefakte) → Evaluate → Conditional Deploy
+- Monitoring Demo: EvidentlyAI Drift Report + automatischer Fail wenn Metrik < Threshold
+
+### Phase 4 (Monat 6–7) – Edge AI Spezialisierung
+Ziele:
+- Modelloptimierung & Deployment auf Embedded Ziel
+- Performance-Vergleich
+
+Projekt (Edge Benchmark):
+1. Wähle Modell (z. B. Bild-Klassifikation MobileNetV3 oder Zeitreihen Autoencoder)
+2. Konvertiere zu ONNX / TFLite
+3. Quantisierung (INT8), optional Pruning
+4. Deployment auf Raspberry Pi / Jetson / (Simulierter Container)
+5. Messe: Latenz, Speicher, Energie (sofern Messgerät) – erstelle Benchmark-Report (Markdown + Diagramme)
+
+### Phase 5 (Monat 7–9) – Portfolio, Spezialisierung & Jobsuche
+Ziele:
+- 3–4 starke Projekte + 1 Edge Benchmark + 1 MLOps Pipeline
+- Öffentliche Sichtbarkeit
+
+Aktionen:
+- Blogposts (Medium/LinkedIn):
+  - „Teststrategien für ML-Modelle (Unit vs. Data vs. Model Regression)“
+  - „Quantisierung: Performance vs. Accuracy Trade-offs am Beispiel XYZ“
+- Mock Interviews (Leetcode Easy für Logik, ML-Fragenkatalog)
+
+---
+
+## E. Projektideen (maßgeschneidert)
+
+| Projekt | Zielkompetenzen | Kurzbeschreibung |
+|---------|-----------------|------------------|
+| Automated ML Test Harness | Testing USP, MLOps | Data Schema Validation, Feature Transformation Unit Tests, Performance Regression |
+| Edge Sensor Anomaly Detection | Edge, DL, Zeitreihen | Autoencoder / Isolation Forest, ONNX Export, Quantisierung, Latenz-Benchmark |
+| RAG Assistant für Embedded Fehlerlogs | GenAI, NLP, Tooling | Log Embeddings, VektorDB, Retrieval + Guardrails, Evaluationsscript (Relevanz) |
+| CI/CD Pipeline für ML Modell | MLOps Kern | GitHub Actions orchestriert Training + Gate Deployment |
+| Visual Model Metrics Dashboard | Kommunikation, Monitoring | Streamlit/Gradio Frontend für Metriken, Drift Reports, Build History |
+
+Priorisierung (empfohlen):
+1. Sensor-Klassifikation (Phase 1)
+2. ML Test Harness (Phase 3)
+3. CI/CD Pipeline (Phase 3/4)
+4. Edge Benchmark (Phase 4)
+5. RAG Assistant (optional Phase 5)
+
+---
+
+## F. Konkrete Lernressourcen
+
+### Python & Clean Code
+- Effective Python (Brett Slatkin)
+- Hitchhiker’s Guide to Python
+- pytest Doku + RealPython Artikel
+
+### Statistik & ML
+- StatQuest (YouTube) – Modelle & Konzepte
+- Kaggle Courses (Intro ML, Feature Engineering)
+- Hands-On Machine Learning (Geron) (Kapitel selektiv)
+
+### MLOps
+- Made With ML (MLOps Sektion)
+- MLflow Documentation
+- DVC Docs (Pipelines & Caching)
+- EvidentlyAI (Drift & Monitoring Beispiele)
+
+### Edge / Embedded AI
+- ONNX Runtime Docs (Quantization)
+- TensorFlow Lite (Microcontrollers Guide)
+- NVIDIA Jetson Inference Repo (falls Hardware verfügbar)
+
+### GenAI (Optional)
+- Hugging Face Course
+- OpenAI Cookbook (für RAG-Evaluationsideen)
+
+### Cloud (leichtgewichtig)
+- AWS oder Azure ML Fundamentals Labs
+- Docker Docs (Multi-stage Builds, Slim Images)
+
+---
+
+## G. Tägliche Lernroutine (Vorbereitungsphase Beispiel)
+
+| Slot | Dauer | Inhalt |
+|------|-------|--------|
+| Slot 1 | 45 min | Python Übungen (pandas, Funktionen, Typisierung) |
+| Slot 2 | 45 min | Statistik / ML Theorie + Notizen |
+| Slot 3 | 30 min | Projektinkrement / Refactoring |
+| Slot 4 | 30 min | Lesen (MLOps / Edge Artikel) |
+| Optional | 30 min | Wiederholung / Flashcards |
+
+---
+
+## H. Skill-Zielmarker (Selbstcheck vor Kursstart)
+
+- Python: Listen/Dict/Set Comprehensions, OOP (Klassen + einfache Vererbung), Fehlerbehandlung strukturiert, Packaging mit `pyproject.toml`
+- Tests: pytest Fixtures, Coverage > 70% für Core-Pipeline
+- Statistik: Varianz, Standardabweichung, Konfidenzintervall, p-Wert, Overfitting erklären
+- ML: 5 Algorithmen in eigenen Worten (LinReg, LogReg, RandomForest, Gradient Boosting, KMeans)
+- Tooling: Git Branching (feature branches, PRs), Basic CI Workflow
+- MLOps: Reproduzierbarer Trainingslauf (Script + Param config), Artefakt-Tracking
+- Edge: Einfaches Modell konvertiert (z. B. sklearn → ONNX) + Latenzmessung dokumentiert
+
+---
+
+## I. Argumentationspunkte für Bildungsgutschein
+
+1. Arbeitsmarkttrend: Steigende Nachfrage nach MLOps & Edge KI (Industrie 4.0, Automotive, IoT)
+2. Individuelle Lücke: Fehlende ML-/Cloud-/MLOps-Kompetenzen verhindern nachhaltige Integration
+3. Kurs schließt strukturell definierte Skill-Gaps (Statistik, ML, Deployment)
+4. Transfernutzen: Vorhandene Test- & Embedded-Erfahrung verkürzt Einarbeitung in produktive AI-Rollen
+5. Ziel: Vermittlung in wachsendes Berufsfeld → langfristige Beschäftigungssicherung
+
+Unterlagen vorbereiten:
+- Lebenslauf (aktualisiert, Test-/Embedded-Stärke hervorheben)
+- Liste Kursoptionen + Maßnahmenummern
+- Eigenes Mini-Projekt Repo Link (Signal Motivation)
+- Kurzstatement „Warum jetzt KI/MLOps + Edge“
+
+---
+
+## J. Optional Ergänzende Zertifizierungen (nach Hauptkurs)
+
+| Zertifikat | Zeitpunkt | Nutzen |
+|------------|----------|--------|
+| Azure DP-100 oder AWS ML Specialty | Nach 6–9M | Strukturierte Wiederholung & Marktsignal |
+| ONNX / Jetson Community Badges | Parallel Edge Projekt | Nischensignal |
+| (Später) Kubernetes CKA (optional) | > 9–12M | Infrastruktur Tiefe für MLOps Skalierung |
+
+---
+
+## K. README-Template (Beispiel für deine Projekt-Repos)
+
+```markdown
+# Projektname – Kurzbeschreibung
+
+## Problemstellung
+Was soll gelöst werden? (Domäne, Use Case)
+
+## Datensatz
+- Quelle / Lizenz
+- Preprocessing Schritte
+
+## Architektur / Pipeline
+(Diagramm oder ASCII)
+Ingest -> Preprocess -> Train -> Evaluate -> Package -> Deploy
+
+## Technologien
+Python (Version), pandas, scikit-learn, MLflow, Docker, ONNX ...
+
+## Nutzung
+```bash
+# Setup
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Training
+python src/train.py --config configs/train.yaml
+
+# Evaluation
+python src/evaluate.py --model runs/model.pkl
+```
+
+## Tests
+```bash
+pytest -q
+```
+
+## Ergebnisse
+| Modell | Metrik | Datum | Commit |
+|--------|--------|-------|--------|
+| RandomForest | AUC 0.912 | 2025-05-02 | a1b2c3d |
+
+## Edge Benchmark (falls vorhanden)
+| Variante | Latenz (ms) | Speicher (MB) | Genauigkeit |
+|----------|-------------|---------------|-------------|
+| FP32 | 35.2 | 48 | 0.912 |
+| INT8 | 18.7 | 26 | 0.905 |
+
+## Nächste Schritte
+- Hyperparameter Tuning
+- Quantisierung Optimierung
+- Monitoring Dashboard
+
+## Lizenz
+MIT
+```
+
+---
+
+## L. Nächste Konkrete Schritte (Action List)
+
+1. Zielrolle final definieren (Vorschlag: „Junior MLOps / Edge AI Engineer mit Testing-Fokus“)
+2. 2–3 AZAV-Kurse evaluieren (MLOps Anteil ≥ 15–20%, aktuelles DL & optional GenAI)
+3. Maßnahmenummern & AZAV-Gültigkeit schriftlich bestätigen (E-Mail archivieren)
+4. GitHub Repo „ml-prep“ heute starten
+5. Lernroutine implementieren (Tagesplan oben)
+6. Erstes Mini-Projekt (Sensor-Klassifikation) bis Ende Woche 6 abschließen
+7. Beratungsgespräch terminieren (mit Repo-Link & Kursliste)
+8. Vor Kursstart: CI Pipeline (Lint + pytest) für Mini-Projekt lauffähig
+9. Früh Edge-spezifische Ressourcen lesen (ONNX quantization basics)
+10. Liste potenzieller Projektbezeichnungen anlegen (für spätere Bewerbung konsistent)
+
+---
+
+## M. Fortschritts-Tracking (Template)
+
+| Woche | Fokus | Deliverable | Status | Notizen |
+|-------|-------|-------------|--------|---------|
+| 1 | Python Basics | Setup Repo + Logging Demo | ☐ | |
+| 2 | Statistik Intro | Notebook: Verteilungen | ☐ | |
+| 3 | pandas + EDA | EDA Report v1 | ☐ | |
+| 4 | ML Basics | Baseline Modell | ☐ | |
+| 5 | Tests & CI | CI Workflow | ☐ | |
+| 6 | Mini-Projekt Abschluss | README final | ☐ | |
+| ... | ... | ... | ... | ... |
+
+---
+
+## N. FAQ (Kurz)
+
+- Reicht ein kurzes Generative AI Modul?  
+  → Nein, Basis in klassischem ML + Deployment bleibt gefragt.
+- Muss Cloud sofort tief sein?  
+  → Nein, Grundlagen (Compute, Storage, IAM, Container) genügen für Start.
+- Wie viele Projekte?  
+  → Qualität vor Quantität: 3 Kernprojekte (ML Core, MLOps Pipeline, Edge Benchmark) + optional RAG.
+
+---
+
+## O. Offene Klärpunkte (bitte beantworten, um weiter zu verfeinern)
+
+1. Bevorzugte Zielrolle aus der Liste?  
+2. Erfahrung mit Docker / Linux Build Pipelines vorhanden?  
+3. Verfügbare Wochenstunden (vor/nach Kursstart)?  
+4. Gewünschte Gesamtdauer (6 vs. 9 Monate)?  
+5. Branchenpräferenz (Automotive, Industrie 4.0, MedTech, Allgemein)?  
+
+Antworte einfach nummeriert – dann optimiere ich Roadmap & Priorisierung weiter.
+
+---
+
+Wenn du möchtest, kann ich dir auch direkt eine ausgefüllte erste Wochenplanung oder ein fertiges `pyproject.toml` + Grundstruktur für dein „ml-prep“ Repo liefern. Sag einfach Bescheid.
